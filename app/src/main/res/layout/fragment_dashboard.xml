@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <EditText
+        android:id="@+id/jobInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:hint="Job Name"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/payHour"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:hint="$0.00 per hour"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/jobInput"
+        app:layout_constraintTop_toBottomOf="@id/jobInput"/>
+
+    <TextView
+        android:id="@+id/PayFreq"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Frequency "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/payHour"
+        app:layout_constraintTop_toBottomOf="@id/payHour"/>
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/multiSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/PayFreq"
+        app:layout_constraintTop_toBottomOf="@id/PayFreq"/>
+
+    <TextView
+        android:id="@+id/startTimeText"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Start Time: "
+        android:textSize="22dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/multiSpinner"
+        app:layout_constraintTop_toBottomOf="@id/multiSpinner"/>
+
+    <EditText
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:focusable="false"
+        android:hint="Select a time"
+        android:inputType="none"
+        app:layout_constraintStart_toEndOf="@id/startTimeText"
+        app:layout_constraintTop_toBottomOf="@id/multiSpinner" />
+
+    <TextView
+        android:id="@+id/endTimeText"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="End Time: "
+        android:textSize="22dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/startTimeText"
+        app:layout_constraintTop_toBottomOf="@id/startTime"/>
+
+    <EditText
+        android:id="@+id/endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:focusable="false"
+        android:hint="Select a time"
+        android:inputType="none"
+        app:layout_constraintStart_toEndOf="@id/endTimeText"
+        app:layout_constraintTop_toBottomOf="@id/startTime" />
+
+    <Switch
+        android:id="@+id/MainPaySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Is this your Current Job?"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/endTimeText"
+        app:layout_constraintTop_toBottomOf="@id/endTime"/>
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Select a date"
+        android:inputType="none"
+        app:layout_constraintStart_toStartOf="@id/MainPaySwitch"
+        app:layout_constraintTop_toBottomOf="@id/MainPaySwitch"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="470dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
